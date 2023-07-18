@@ -79,7 +79,7 @@ The following steps were performed:
 
 <h1> ML Model Implementation </h1>
 
-The following ML Models were implemented:
+The following ML Models were implemented (along with hyperparameter-tuning):
 
 * Logistic Regression
 * Decision Trees
@@ -103,15 +103,6 @@ The following ML Models were implemented:
  - The numerical columns were scaled using StandardScaler;
  - The dataset was split into training dataset and testing dataset;
  - The imbalance in the dependent variable of the training dataset was taken care of using the SMOTE method.
-
-* The following models were used:
-  - Logistic Regression
-  - Decision Tree
-  - K-Nearest Neighbors
-  - Random Forest
-  - Support Vector Machine
-  - AdaBoost
-  along with hyperparameter-tuning.
 
 * After going through the performance metrics of all the implemented model, the Random Forest was chosen as the final prediction model with a Recall score of 0.75 and an ROC-AUC score of 0.88.
 

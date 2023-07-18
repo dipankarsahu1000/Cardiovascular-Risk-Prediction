@@ -104,9 +104,11 @@ The following ML Models were implemented (along with hyperparameter-tuning):
   - The dataset was split into training dataset and testing dataset;
   - The imbalance in the dependent variable of the training dataset was taken care of using the SMOTE method.
 
-* After going through the performance metrics of all the implemented model, the Random Forest was chosen as the final prediction model with a Recall score of 0.75 and an ROC-AUC score of 0.88.
+* The Recall scores and the ROC-AUC scores is considered for deciding the best performing final model. Recall score is important here because the cases of false negatives is to be kept at a minumum here and ROC-AUC score measures the ability of the model to separate the positive and negative classes.
 
-* Using SHAP for interpreting the model, it was found that 'pulse_pressure' (a new feature created out of the original 'sysbp' and 'diabp' features), 'age', 'cigsperday' and 'totchol' features had the most impact on the model's output.
+* Among all the models, the Random Forest was chosen as the final prediction model with a Recall score of 0.75 and an ROC-AUC score of 0.88.
+
+* Using SHAP for interpreting the model, it was found that 'pulse_pressure' (a new feature created out of the original 'sysbp' and 'diabp' features), 'age', 'cigsperday' and 'totchol' features had the most impact on the final model's output.
 
 
 

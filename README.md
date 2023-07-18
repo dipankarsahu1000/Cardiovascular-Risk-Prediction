@@ -96,13 +96,13 @@ The following ML Models were implemented (along with hyperparameter-tuning):
 * While visualising the data, it was discovered that the dependent vairable is highly imbalanced and a couple of the independent variables were correlated. Also, many details about the categorical columns and the numerical columns were discovered.
 
 * To ensure a better a performance of the models, feature engineering on the dataset was performed where:
- - The outliers in the were handled;
- - Categorical encoding was done on one of the features;
- - A new feature was created, the unnecessary were removed;
- - The skewness in the numerical columns was reduced using log transformation;
- - The numerical columns were scaled using StandardScaler;
- - The dataset was split into training dataset and testing dataset;
- - The imbalance in the dependent variable of the training dataset was taken care of using the SMOTE method.
+  - The outliers in the were handled;
+  - Categorical encoding was done on one of the features;
+  - A new feature was created, the unnecessary were removed;
+  - The skewness in the numerical columns was reduced using log transformation;
+  - The numerical columns were scaled using StandardScaler;
+  - The dataset was split into training dataset and testing dataset;
+  - The imbalance in the dependent variable of the training dataset was taken care of using the SMOTE method.
 
 * After going through the performance metrics of all the implemented model, the Random Forest was chosen as the final prediction model with a Recall score of 0.75 and an ROC-AUC score of 0.88.
 

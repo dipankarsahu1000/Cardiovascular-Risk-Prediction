@@ -10,9 +10,9 @@ The classification goal is to predict whether the patient has a 10-year risk of 
 
 <h1> Getting to Know the Data </h1>
 
-1. Number of Rows and Columns: 3390 rows and 17 columns.
-2. Number of Duplicate Values: 0 duplicate values.
-3. Number of Missing/Null Values: 510 duplicate values.
+* Number of Rows and Columns: 3390 rows and 17 columns.
+* Number of Duplicate Values: 0 duplicate values.
+* Number of Missing/Null Values: 510 duplicate values.
 
 
 <h1> Understanding The Variables </h1>
@@ -48,5 +48,76 @@ The classification goal is to predict whether the patient has a 10-year risk of 
  15. **glucose**: The glucose level of the patient (continuous numerical values).
 
  16.  **TenYearCHD**: Whether the patient has a 10-year risk of future coronary heart disease (nominal categorical numbers: 0 signifying 'No' and 1 signifying 'Yes').
+
+
+<h1> Data Wrangling </h1>
+
+The following steps were performed:
+
+* Modifying the column names.
+* Taking care of the null values.
+* Sanity Checks.
+* Separating the independent variables and the dependent variable.
+
+<h1> Hypothesis Testing </h1>
+* Chi-Square Test is used to check whether there is relation between the gender of the patient and the risk of developing a coronary heart disease (CHD).
+* Chi-Square Test is used to check whether there is relation between the education level of the patient and the risk of developing a coronary heart disease (CHD).
+
+<h1> Feature Engineering & Data Pre-processing </h1>
+
+The following steps were performed:
+
+* Handling the outliers.
+* Categorical encoding.
+* Feature manipulation.
+* Feature selection.
+* Data transformation.
+* Data scaling.
+* Data splitting.
+* Handling imbalanced dataset.
+
+
+<h1> ML Model Implementation </h1>
+
+The following ML Models were implemented:
+
+* Logistic Regression
+* Decision Trees
+* K-Nearest Neighbors
+* Random Forest
+* Support Vector Machine
+* AdaBoost
+
+
+<h1> Conclusion </h1>
+
+* All the required data wrangling steps were implemented to take of the null/missing values, separate the dependent variable & independent variables and modify the column names.
+
+* While visualising the data, it was discovered that the dependent vairable is highly imbalanced and a couple of the independent variables were correlated. Also, many details about the categorical columns and the numerical columns were discovered.
+
+* To ensure a better a performance of the models, feature engineering on the dataset was performed where:
+ - The outliers in the were handled;
+ - Categorical encoding was done on one of the features;
+ - A new feature was created, the unnecessary were removed;
+ - The skewness in the numerical columns was reduced using log transformation;
+ - The numerical columns were scaled using StandardScaler;
+ - The dataset was split into training dataset and testing dataset;
+ - The imbalance in the dependent variable of the training dataset was taken care of using the SMOTE method.
+
+* The following models were used:
+  - Logistic Regression
+  - Decision Tree
+  - K-Nearest Neighbors
+  - Random Forest
+  - Support Vector Machine
+  - AdaBoost
+  along with hyperparameter-tuning.
+
+* After going through the performance metrics of all the implemented model, the Random Forest was chosen as the final prediction model with a Recall score of 0.75 and an ROC-AUC score of 0.88.
+
+* Using SHAP for interpreting the model, it was found that 'pulse_pressure' (a new feature created out of the original 'sysbp' and 'diabp' features), 'age', 'cigsperday' and 'totchol' features had the most impact on the model's output.
+
+
+
 
 
